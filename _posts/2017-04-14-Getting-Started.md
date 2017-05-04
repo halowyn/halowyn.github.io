@@ -6,7 +6,7 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-标签（空格分隔）： 设置搜索按钮 获取输入框完成状态 文本框聚焦时placeholder改变
+<div style="word-spacing: 10px;color: red;font-weight: bold">设置搜索按钮 获取输入框完成状态 文本框聚焦时placeholder改变</div>
 
 ---
 
