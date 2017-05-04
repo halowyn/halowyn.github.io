@@ -10,7 +10,7 @@ excerpt_separator: "```"
 <div style="word-spacing: 10px;color: red;font-weight: bold">表单提交 px转rem pc端与移动端相互转换 获取图片验证码 下拉加载 页面乱码 邮箱正则表达式 index</div>
 ---
 
-<h5>1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：</h5>
+<h3>1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：</h3>
 
 ```
 <form action="/vn/user/goFile" method="post" enctype="multipart/form-data" id="form">
