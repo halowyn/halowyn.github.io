@@ -6,7 +6,8 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-
+标签：设置搜索按钮 获取输入框完成状态 文本框聚焦时placeholder改变
+---
 
 ### 1. 功能突破
 * 文本框输入时调用移动端键盘的搜索按钮(将文本框放在form里面，设置onsubmit="false")，同时将input的属性设置为搜索search：
@@ -40,8 +41,6 @@ $('#find,#find1').keyup(function(e){
 * 移动端适配时，鉴于可能存在嵌套app的情况，需要有图片显示的地方慎用img标签（因为app可能对图片做了点击放大处理，影响用户体验），尽量使用背景图，并且设置background-size：cover；或者background-size：100% 100%；
 
 
-
-  未完待续...
 
 
 
