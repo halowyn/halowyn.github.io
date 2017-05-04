@@ -1,15 +1,16 @@
 ﻿---
 layout: post_layout
-title: 项目总结二
+title: 项目总结2
 time: On Wednesday, April 19, 2017
 location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
 
+
 标签： 表单提交 px转rem插件 PC端与移动端之间的跳转 获取图片验证码 下拉加载 修改头像  验证手机号和邮箱
 
----
+----
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
 ```
