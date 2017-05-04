@@ -1,4 +1,4 @@
-﻿---
+---
 layout: post_layout
 title: 项目总结二
 time: On Wednesday, April 19, 2017
@@ -6,6 +6,7 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
+
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
 
