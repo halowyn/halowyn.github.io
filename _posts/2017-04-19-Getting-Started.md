@@ -8,6 +8,7 @@ excerpt_separator: "```"
 ---
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
+
 ```
 <form action="/vn/user/goFile" method="post" enctype="multipart/form-data" id="form">
     <input type="file" name="file" id="file" multiple="multiple" onchange="previewImage(this)">
@@ -31,22 +32,22 @@ excerpt_separator: "```"
 
 ### 3. 判断PC端与移动端进行适配页面的跳转，将m文件放在PC端的代码文件下边，节省一个域名，但是要注意跳转的方式。具体代码如下：
  pc转移动
-```
-function browserRedirect() {
-  var sUserAgent = navigator.userAgent.toLowerCase();
-  var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
-  var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
-  var bIsMidp = sUserAgent.match(/midp/i) == "midp";
-  var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
-  var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
-  var bIsAndroid = sUserAgent.match(/android/i) == "android";
-  var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
-  var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
-  if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
-    window.location.href="m/page/index.html";
-  } else {}
-}
-```
+  ```
+    function browserRedirect() {
+      var sUserAgent = navigator.userAgent.toLowerCase();
+      var bIsIpad = sUserAgent.match(/ipad/i) == "ipad";
+      var bIsIphoneOs = sUserAgent.match(/iphone os/i) == "iphone os";
+      var bIsMidp = sUserAgent.match(/midp/i) == "midp";
+      var bIsUc7 = sUserAgent.match(/rv:1.2.3.4/i) == "rv:1.2.3.4";
+      var bIsUc = sUserAgent.match(/ucweb/i) == "ucweb";
+      var bIsAndroid = sUserAgent.match(/android/i) == "android";
+      var bIsCE = sUserAgent.match(/windows ce/i) == "windows ce";
+      var bIsWM = sUserAgent.match(/windows mobile/i) == "windows mobile";
+      if (bIsIpad || bIsIphoneOs || bIsMidp || bIsUc7 || bIsUc || bIsAndroid || bIsCE || bIsWM) {
+        window.location.href="m/page/index.html";
+      } else {}
+    }
+  ```
 移动转pc时用了字符串拼接 :
 ```
       else {
@@ -57,7 +58,7 @@ function browserRedirect() {
   
 ### 4. 获取图片验证码的方式
  ``` 
- $(mod).attr('src','*?param='+n+'&mobile='+tel+'&t='+Math.random()); 
+    $(mod).attr('src','*?param='+n+'&mobile='+tel+'&t='+Math.random()); 
 
  ```
 
@@ -65,7 +66,7 @@ function browserRedirect() {
 
 ### 6. 通过a链接下载文件代码
 ```
-<a href='+n.url+' class="download r"  download="newfilename">
+  <a href='+n.url+' class="download r"  download="newfilename">
 ```
 ### 7.下拉加载数据，并提示加载是否完毕：首先要判断页面是否滑动到底部，如果滑动到底部，加载数据，且在列表下面追加正在加载，当页面加载成功时去掉正在加载提示，直到再次滑动到底部，如此反复；如果没有数据了就追加加载完毕。
 判断是否滑动到底部的代码如下：
