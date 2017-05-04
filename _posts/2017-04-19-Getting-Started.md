@@ -10,7 +10,6 @@ excerpt_separator: "```"
 
 标签： 表单提交 px转rem插件 PC端与移动端之间的跳转 获取图片验证码 下拉加载 修改头像  验证手机号和邮箱
 
-----
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
 ```
@@ -61,7 +60,10 @@ function browserRedirect() {
 ```
   
 ### 4. 获取图片验证码的方式
- ``` $(mod).attr('src','*?param='+n+'&mobile='+tel+'&t='+Math.random()); ```
+ ``` 
+ $(mod).attr('src','*?param='+n+'&mobile='+tel+'&t='+Math.random()); 
+
+ ```
 
 ### 5. 验证手机号码（/^1(3|4|5|7|8)\d{9}$/）
 
@@ -118,8 +120,15 @@ $('#file').on('change', function(){
 ```
 ### 11. 作为公共页面的公共部分的头部尾部，要慎重写左右padding，否则即使body宽度设置了100%，也依然不能填充整个页面。
 ### 12. 限制input type="file"上传的文件类型，
-比如，上传的是ppt格式，添加属性```<input type="file" accept=".ppt,.pptx">```
-上传的是图片类型，添加input属性 ```<input type="file" accept="image/*">```
+比如，上传的是ppt格式，添加属性
+```
+<input type="file" accept=".ppt,.pptx">
+```
+上传的是图片类型，添加input属性
+ ```
+ <input type="file" accept="image/*">
+
+ ```
 
 ### 13. 设置radio选中与不选中的
 ```
