@@ -13,7 +13,7 @@ excerpt_separator: "```"
 * 在题目中不同的地方可以用不同的class作区分
 * 遍历一个对象里面有没有与数组中的相同的值
 
-```java
+```python
   $.each($('.exam'),function(i,n){
       if(arr.indexOf($(n).attr('id'))!=-1){
         $(n).addClass('b');
@@ -30,7 +30,7 @@ excerpt_separator: "```"
  
  解决办法：复选框无法选择是因为他的触发跟标签的触发条件不一致，所以先获取一下点击事件的e.target.value,判断是否为on，然后将on和undefined区别解决就可以了；代码如下：
 
-```java
+```python
 if(e.target.value=="on"){
    $(this).find('input:checkbox').eq(0).prop("checked");
 }else{
