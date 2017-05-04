@@ -29,7 +29,7 @@ excerpt_separator: "```"
             {
              "px_to_rem":40,
              "max_rem_fraction_length":3,
-             "available_file_types":[".html",".css",".less",".sass"],
+             "available_file_types":[".html",".css",".less",".sass"]
             }
     ```
 
