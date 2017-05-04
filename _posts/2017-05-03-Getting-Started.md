@@ -6,7 +6,7 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-<div style="word-spacing: 10px;color: red;font-weight: bold">控制radio和checkbox是否选中 转盘抽奖</div>
+<div style="word-spacing: 10px;color: #337ab7;font-weight: bold">控制radio和checkbox是否选中 转盘抽奖</div>
 
 ### 单选和多选
 * 系统默认的radio和checkbox小，可以自行设置大小，但是要给radio设置border-radius：100%；
