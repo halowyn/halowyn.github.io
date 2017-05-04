@@ -6,16 +6,17 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-标签：设置搜索按钮 获取输入框完成状态 文本框聚焦时placeholder改变
+标签（空格分隔）： 设置搜索按钮 获取输入框完成状态 文本框聚焦时placeholder改变
+
 ---
 
 ### 1. 功能突破
 * 文本框输入时调用移动端键盘的搜索按钮(将文本框放在form里面，设置onsubmit="false")，同时将input的属性设置为搜索search：
 
 ```    
-<form id="form" onsubmit="return false;">
-	<input type="search" id="find" class="l0">
-</form>
+	<form id="form" onsubmit="return false;">
+		<input type="search" id="find" class="l0">
+	</form>
 ```
 * 获取文本框搜索完成状态(方法如同pc端)：
 ```
@@ -26,7 +27,7 @@ $('#find,#find1').keyup(function(e){
 * 文本框聚焦placeholder消失，失去焦点placeholder出现，使用行间的focus和blur事件以及this，代码如下：
 
 ```
-<input type="search"placeholder="关键词 / 拼音" onfocus="this.placeholder=''" onblur="this.placeholder='关键词 / 拼音'">
+		<input type="search"placeholder="关键词 / 拼音" onfocus="this.placeholder=''" onblur="this.placeholder='关键词 / 拼音'">
 ```
 
 ### 2. 问题

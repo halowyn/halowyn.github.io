@@ -7,6 +7,7 @@ pulished: true
 excerpt_separator: "```"
 ---
 
+标签（空格分隔）： 表单提交 px转rem pc端与移动端相互转换 获取图片验证码 下拉加载 页面乱码 邮箱正则表达式 index
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
 
