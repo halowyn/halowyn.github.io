@@ -30,7 +30,7 @@ excerpt_separator: "```"
     </li>
     <li>相关代码如下：</li> 
 </ul>
-```
+<body>
     <textarea name="" id="" cols="30" rows="10"></textarea>
     <div class="btn">画布生成图片</div>
     <script src="../js/jquery-3.0.0.min.js"></script>
@@ -43,11 +43,10 @@ excerpt_separator: "```"
         })
         var imgs=['https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=2aad40cfb8b7d0a264c9039dfbee760d/9d82d158ccbf6c8107930095b63eb13533fa4022.jpg','7.png','4.jpg'],data=['1','2'];
         function canvasTextAutoLine(str,canvas,initX,initY,lineHeight){
-
             var ctx = canvas.getContext("2d"); 
             ctx.fillStyle = '#333';
             ctx.strokeStyle = '#333'; //设置笔触的颜色
-            ctx.font = "normal 12px 'microsoft yahei', 'Hiragino Sans GB', 'Tahoma'";                        //设置字体
+            ctx.font = "normal 12px 'microsoft yahei', 'Hiragino Sans GB', 'Tahoma'"; //设置字体
             var lineWidth = 0;
             var canvasWidth = canvas.width-20; 
             canvas.height=500;
@@ -61,15 +60,10 @@ excerpt_separator: "```"
                     lastSubStrIndex=i;
                 } 
                 if(i==str.length-1){
-                    console.log(i);
                     ctx.fillText(str.substring(lastSubStrIndex,i+1),initX,initY);
                 }
             }
-            console.log(initY);
             initY+=18;
-            $.each(data,function(i,n){
-                console.log(i)
-            })
             $.each(imgs,function(i,n){
                 var img=new Image();
                 img.crossOrigin="Anonymous";
@@ -77,12 +71,9 @@ excerpt_separator: "```"
                     var ctx=canvas.getContext("2d");
                     heights=img.height*100/img.width;
                     ctx.drawImage(img,50,initY,100,heights);
-                    
                     if(i==imgs.length-1){
                         var images=new Image();
                         images.src=cvs.toDataURL("image/png",'1');
-                        console.log(images)
-                        
                         $('body').append(images);
                     }
                     initY+=heights+20;
@@ -92,6 +83,7 @@ excerpt_separator: "```"
 
         }
     </script>  
-  ```
+</body>
+
             
         
