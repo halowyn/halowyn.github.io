@@ -7,7 +7,7 @@ pulished: true
 excerpt_separator: "```"
 ---
 
-<div style="word-spacing: 10px;color: #337ab7;font-weight: bold">表单提交 px转rem pc端与移动端相互转换 获取图片验证码 下拉加载 页面乱码 邮箱正则表达式 index</div>
+<div style="word-spacing: 10px;color: #337ab7;font-weight: bold">表单提交 px转rem pc端与移动端相互转换 获取图片验证码 下拉加载 上传头像 页面乱码 手机号邮箱正则表达式 index</div>
 ---
 
 ### 1. 使用表单提交数据，要注意格式,有时候同样的数据post表单与ajax请求的方式不一样，要注意action，enctype的参数：
