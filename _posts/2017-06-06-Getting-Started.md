@@ -28,7 +28,7 @@ excerpt_separator: "```"
             <p>4.绘制的时候画布的高度无法自动适应，需要直接规定好画布的高度（如果内容大小可控的话还好，复杂的情况下不建议这种方法；<span style="color: red">另有高见请指点</span>）</p>
         </div>
     </li>
-    <li>相关代码如下：</li> 
+    <li style="color:green">相关代码如下：</li> 
 </ul>
 ```
     <textarea name="" id="" cols="30" rows="10"></textarea>
@@ -41,7 +41,7 @@ excerpt_separator: "```"
             cvs.width=600;
             canvasTextAutoLine(val,cvs,10,30,18);
         })
-        var imgs=['https://ss0.baidu.com/7Po3dSag_xI4khGko9WTAnF6hhy/image/h%3D200/sign=2aad40cfb8b7d0a264c9039dfbee760d/9d82d158ccbf6c8107930095b63eb13533fa4022.jpg','7.png','4.jpg'],data=['1','2'];
+        var imgs=['http://mpic.tiankong.com/a76/ed5/a76ed520544bbe949d90abb688482722/640.jpg','7.png','4.jpg'],data=['1','2'];
         function canvasTextAutoLine(str,canvas,initX,initY,lineHeight){
             var ctx = canvas.getContext("2d"); 
             ctx.fillStyle = '#333';
