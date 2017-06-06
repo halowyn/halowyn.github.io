@@ -30,7 +30,7 @@ excerpt_separator: "```"
     </li>
     <li>相关代码如下：</li> 
 </ul>
-<body>
+```
     <textarea name="" id="" cols="30" rows="10"></textarea>
     <div class="btn">画布生成图片</div>
     <script src="../js/jquery-3.0.0.min.js"></script>
@@ -46,7 +46,7 @@ excerpt_separator: "```"
             var ctx = canvas.getContext("2d"); 
             ctx.fillStyle = '#333';
             ctx.strokeStyle = '#333'; //设置笔触的颜色
-            ctx.font = "normal 12px 'microsoft yahei', 'Hiragino Sans GB', 'Tahoma'"; //设置字体
+            ctx.font = "normal 12px 'microsoft yahei', 'Hiragino Sans GB', 'Tahoma'";//设置字体
             var lineWidth = 0;
             var canvasWidth = canvas.width-20; 
             canvas.height=500;
@@ -83,7 +83,6 @@ excerpt_separator: "```"
 
         }
     </script>  
-</body>
-
+  ```
             
         
