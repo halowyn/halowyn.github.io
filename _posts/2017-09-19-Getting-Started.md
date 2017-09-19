@@ -8,8 +8,8 @@ excerpt_separator: "```"
 ---
 <h2>his系统医生排班表</h2>        
 <div style="word-spacing: 10px;color: #337ab7;font-weight: bold">做诊所his系统后台时，主要需要实现根据医生选择预约时间和根据时间选择预约医生的功能，修改时需要时间和表格里的预约的医生和时间一致，表格的变动较多，略微有些复杂。实现效果如下：</div>
-![Alt text](./图片1.png)
-![Alt text](./图片2.png)
+<img src="../images/图片1.png" alt="">
+<img src="../images/图片2.png" alt="">
 <h5>实现思路如下：</h5>
 <ul>
         <li>先做好表格的样式，在做后台管理系统的过程中会用到较多的表格，我们可以使用bootstrap的表格来做，简单方便，需要修改的样式直接在bootstrap.css里做出修改即可</li>
