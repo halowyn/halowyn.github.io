@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: canvas绘图项目总结
+title: canvas绘图使用总结
 time: On Tuesday, June 6, 2017
 location: BeiJing
 pulished: true
