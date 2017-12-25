@@ -1,6 +1,6 @@
 ---
 layout: post_layout
-title: bootstrap制作官方网站心得
+title: bootstrap制作官方网站和构建后台管理系统心得
 time: On Friday, December15, 2017
 location: BeiJing
 pulished: true
@@ -84,4 +84,34 @@ $('.carousel-indicators').append(indicates);
 ``` python
  $('.intro').stop().hide(510);
  $('.intro').eq(index).stop().show(510);
+```
+<h3>5.在angular中使用bootstrap模态框简便的设置弹窗提示并且传递数据</h3>
+背景：在制作后台管理系统时，需要进行增删改查，尤其是删除时，为了防止用户错删，保护数据，做弹窗提示是很有必要的。但是传统的浏览器自带的弹窗比较看上去不够美观，操作起来也不那么流畅，所以在引入bootstrap的情况下，我们值得做此尝试。
+
+调用模态框的模板代码如下：
+``` python
+ <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                <h4 class="modal-title" id="myModalLabel">提示</h4>
+            </div>
+            <div class="modal-body">
+                您确定要删除本条数据吗？
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                <button type="button" class="btn btn-primary" id="delete" ng-click="deletedata()">删除</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<li data-toggle="modal" data-target="#myModal"  ng-click="deliverdata(d)"><a href="#">删除</a></li>
+```
+
+在deliverdata方法中传递参数，然后在模态框中点击进行相应的修改，隐藏模态框。
+``` python
+$('#myModal').modal('hide')
 ```
