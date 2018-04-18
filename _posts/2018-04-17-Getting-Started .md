@@ -14,10 +14,11 @@ this.setData is not a function;at pages/index/index onLoad function;报错的解
     解决办法：在该函数外层将this赋值给that，之后再赋值。var that=this常用
 </div>
 
-
+```
 <h3>获取用户权限</h3>
 思考：当小程序里需要用到用户信息时，需要先获取用户权限，在用户首次登录该小程序时，提醒用户进行授权。
 解决办法：
+```
 <h6>1.在app.js里onlaunch函数里调用getUser函数</h6>
 ``` python
  getuser() {
