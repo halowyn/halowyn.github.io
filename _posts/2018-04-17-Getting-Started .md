@@ -15,7 +15,6 @@ this.setData is not a function;at pages/index/index onLoad function;报错的解
 </div>
 
 
-```
 <h3>获取用户权限</h3>
 思考：当小程序里需要用到用户信息时，需要先获取用户权限，在用户首次登录该小程序时，提醒用户进行授权。
 解决办法：
