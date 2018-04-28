@@ -8,28 +8,28 @@ excerpt_separator: "```"
 ---
 
 <h3>1. Error: getaddrinfo ENOTFOUND http://xx.dd.com</h3>
-<div style="color: red">
+<div style="color: green">
     解决方法：在node.js中使用http或者https发送请求的时候host不要带http://或者https://,直接写xx.yy.com即可。
 </div>
 
 <h3>2. Error: cannot post / 报错</h3>
-<div style="color: red">
+<div style="color: green">
     解决方法：由于项目工期太短，以$http方式的post请求没找到合适的方法，情急之下就换成了ajax的post方法，可以了
 </div>
 
 <h3>3.connect ECONNREFUSED 127.0.0.1:3000解决方案</h3>
-<div style="color: red">
+<div style="color: green">
     解决方法：尝试了网上的说法npm config set proxy null，无效，后来在配置文件里修改 "port": process.env.PORT || 3000
 </div>
 
 <h3>4.WebStorm警告unresolved function or method()</h3>
-<div>解决办法：1.在WebStorm 2016.x-2017.x中：确保启用了Node.js Core库Settings (Preferences) | Languages & Frameworks | Node.js and NPM</div>
+<div style="color: green">解决办法：1.在WebStorm 2016.x-2017.x中：确保启用了Node.js Core库Settings (Preferences) | Languages & Frameworks | Node.js and NPM</div>
 
 <h3>5.AngularJs中select绑定ng-model数字类型绑定问题：
 
 使用ng-model绑定select的时候默认是string字符串，如果指定的number值会绑定失败</h3>
 
-
+``` python 
   <div ng-app='module' ng-controller="myCtrl">  
         请选择性别：  
         <select name="sex" ng-model='sex' >   
@@ -39,7 +39,6 @@ excerpt_separator: "```"
         </select>  
         <button type="" ng-click="alter();">修改</button>  
     </form> 
-``` python 
     <script>  
     (function() {  
         'use strict';  
@@ -55,7 +54,7 @@ excerpt_separator: "```"
        });  
     })();  
     </script>
-```
+
 指定数值类型，绑定失败
 <div style="color: red">解决办法：如果需要指定number类型的值，对于select的绑定使用ng-options方式
  请选择性别：  
@@ -63,6 +62,8 @@ excerpt_separator: "```"
 <option value="">请选择</option>  
 </select>  
 如果不一定非得number类型，在修改$scope的时候指定string类型就行了。
+
 </div>
+```
 
 
