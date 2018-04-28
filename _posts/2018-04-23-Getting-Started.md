@@ -29,7 +29,7 @@ excerpt_separator: "```"
 
 使用ng-model绑定select的时候默认是string字符串，如果指定的number值会绑定失败</h3>
 
-``` python 
+---
   <div ng-app='module' ng-controller="myCtrl">  
         请选择性别：  
         <select name="sex" ng-model='sex' >   
@@ -58,12 +58,13 @@ excerpt_separator: "```"
 指定数值类型，绑定失败
 <div style="color: red">解决办法：如果需要指定number类型的值，对于select的绑定使用ng-options方式
  请选择性别：  
+ ---
 <select name="sex" ng-model='sex'  ng-options='x.id as x.name for x  in [{id:1,name:"男"},{id:2,name:"女"}]'>   
 <option value="">请选择</option>  
 </select>  
 如果不一定非得number类型，在修改$scope的时候指定string类型就行了。
 
 </div>
-```
+
 
 
