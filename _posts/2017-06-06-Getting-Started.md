@@ -6,28 +6,25 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-<div style="word-spacing: 10px;color: #337ab7;font-weight: bold">在做后台管理系统时，有时候需要对详细信息生成一个预览图以供管理者查看，如果页面元素简单的话可以直接用canvas画布进行绘制，但是当页面元素较为复杂且超过一屏的时候则需要使用插件html2canvas.js进行绘制，在此对于绘制过程中的一些难点和细节总结如下：</div>
-<h3>一、直接通过canvas绘制</h3>
-<ul>
-    <li style="color:red">疑难点：
-        <p>1.在绘制图片时默认的不允许图片跨域</p>
-        <p>2.在画布中绘制文字无法自动换行</p>
-        <p>3.绘制图片，图片加载的img.src的位置放在img.onload上边提示画布被污染</p>
-    </li>
-    <li style="color:green">对应的解决方案：
-        <p>1.当页面中存在若干张图片时，每次绘制之前new一个image，然后为它设置属性img.crossOrigin="Anonymous";注意区别大小写</p>
-        <div>2.这里主要用到fillText和measureText属性：
-            <p style="padding-left:30px">fillText（text,x,y）将一定的字符串绘制在以x,y的横坐标和纵坐标为起点的位置；</p>
-            <p style="padding-left:30px">measureText(str).width/height,画布中的本属性用于测量字符串或者指定字符的款和高；</p>
-            <p style="padding-left:30px">具体实现：确定画布的宽度，左上的留白，内容区域的宽度，根据文字的长度进行循环，循环体内，每次遍历变量lineWidth+=ctx.measureText(str[i]).width; 当linewidth达到每行限制的宽度，就用str.substring进行字符串切割，然后用filltext绘制，当最后一行的宽度不足行宽时，就从上个截取后的字符串开始，到最后一个组成一组填充</p>
-        </div>
-        <p>3.绘制图片时，图片加载的img.src的位置放在img.onload下边</p>
-        <p>4.绘制的时候画布的高度无法自动适应，需要直接规定好画布的高度（如果内容大小可控的话还好，复杂的情况下不建议这种方法；<span style="color: red">另有高见请指点</span>）</p>
-        </div>
-    </li>
-    <li style="color:green">相关代码如下：</li> 
-</ul>
+<div style="word-spacing: 10px;font-weight: bold">在做后台管理系统时，有时候需要对详细信息生成一个预览图以供管理者查看，如果页面元素简单的话可以直接用canvas画布进行绘制，但是当页面元素较为复杂且超过一屏的时候则需要使用插件html2canvas.js进行绘制，在此对于绘制过程中的一些难点和细节总结如下：</div>
 
+**一.直接通过canvas绘制**
+
+疑难点：
+           1.  在绘制图片时默认的不允许图片跨域
+           2.  在画布中绘制文字无法自动换行
+           3.  绘制图片，图片加载的img.src的位置放在img.onload上边提示画布被污染
+
+对应的解决方案：
+          1. 当页面中存在若干张图片时，每次绘制之前new一个image，然后为它设置属性img.crossOrigin="Anonymous";注意区别大小写
+          2. 这里主要用到fillText和measureText属性：
+            -  fillText（text,x,y）将一定的字符串绘制在以x,y的横坐标和纵坐标为起点的位置；
+            - measureText(str).width/height,画布中的本属性用于测量字符串或者指定字符的款和高；
+            - 具体实现：确定画布的宽度，左上的留白，内容区域的宽度，根据文字的长度进行循环，循环体内，每次遍历变量lineWidth+=ctx.measureText(str[i]).width; 当linewidth达到每行限制的宽度，就用str.substring进行字符串切割，然后用filltext绘制，当最后一行的宽度不足行宽时，就从上个截取后的字符串开始，到最后一个组成一组填充
+        3. 绘制图片时，图片加载的img.src的位置放在img.onload下边
+        4. 绘制的时候画布的高度无法自动适应，需要直接规定好画布的高度（如果内容大小可控的话还好，复杂的情况下不建议这种方法；另有高见请指点）
+       
+相关代码如下：
 ```
     <textarea name="" id="" cols="30" rows="10"></textarea>
     <div class="btn">画布生成图片</div>
@@ -82,19 +79,16 @@ excerpt_separator: "```"
         }
     </script>  
 ```
- <h3>二、通过html2canvas.js绘制</h3>
- <ul>
-    <li style="color:red">疑难点：
-        <p>1.html2canvas.js同样需要解决图片跨域的问题</p>
-        <p>2.修改了js之后按照文档上的调用方法仍然无法调用成功</p>
-    </li>
-    <li style="color:green">对应的解决方案：
-        <p>1.修改js中的代码，找到ImageContainer函数进行修改</p>
-        <p>2.调用时将useCORS设置为true，如果设置allowTaint时，只能为false</p>
-    </li>
-</ul>
-
-js中的代码段修改如下：
+**二、通过html2canvas.js绘制**
+疑难点：
+        1. html2canvas.js同样需要解决图片跨域的问题
+        2. 修改了js之后按照文档上的调用方法仍然无法调用成功
+        
+对应的解决方案：
+       1. 修改js中的代码，找到ImageContainer函数进行修改
+       2. 调用时将useCORS设置为true，如果设置allowTaint时，只能为false
+   
+js中的代码修改如下：
 ```
 function ImageContainer(src, cors) {
         this.src = src;
@@ -133,17 +127,14 @@ $('.btn').click(function(){
     });
 })
 ```
-<h3>三、通过html2canvas.js截取整个标签，不限于1屏</h3>
- <ul>
-    <li style="color:red">疑难点：
-        <p>1.html2canvas.js同样需要获取到标签的宽和高</p>
-        <p>2.同样的调用方法无法成功</p>
-    </li>
-    <li style="color:green">对应的解决方案：
-        <p>1.修改js中的代码，找到ImageContainer函数进行修改</p>
-        <p>2.修改调用方式</p>
-    </li>
-</ul>
+**三、通过html2canvas.js截取整个标签，不限于1屏**
+疑难点：
+1.html2canvas.js同样需要获取到标签的宽和高
+2.同样的调用方法无法成功
+
+对应的解决方案：
+1.修改js中的代码，找到ImageContainer函数进行修改
+2.修改调用方式
 
 js中的代码段修改如下：
 
