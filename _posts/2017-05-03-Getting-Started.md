@@ -6,14 +6,14 @@ location: BeiJing
 pulished: true
 excerpt_separator: "```"
 ---
-<div style="word-spacing: 10px;color: #337ab7;font-weight: bold">控制radio和checkbox是否选中 转盘抽奖</div>
+<div style="word-spacing: 10px;font-weight: bold">控制radio和checkbox是否选中 转盘抽奖</div>
 
-### 单选和多选
+##### 单选和多选
 * 系统默认的radio和checkbox小，可以自行设置大小，但是要给radio设置border-radius：100%；
 * 在题目中不同的地方可以用不同的class作区分
 * 遍历一个对象里面有没有与数组中的相同的值
 
-```python
+```
   $.each($('.exam'),function(i,n){
       if(arr.indexOf($(n).attr('id'))!=-1){
         $(n).addClass('b');
@@ -55,5 +55,5 @@ if(counts==chooseonly){
 
 ```
 
-## 转盘抽奖
+#####转盘抽奖
 * 使用jqueryrotate.js,但是要对中奖区域的旋转角度进行判断，根据后台返回的中奖与否，决定旋转重点。
