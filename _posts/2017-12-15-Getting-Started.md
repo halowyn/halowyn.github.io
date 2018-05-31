@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: bootstrap制作官方网站和构建后台管理系统心得
-time: On Friday, December15, 2017
+time: On Friday, December 15, 2017
 location: BeiJing
 pulished: true
 excerpt_separator: "```"

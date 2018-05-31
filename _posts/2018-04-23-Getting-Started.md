@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: angular.js HTTP开发遇到的若干问题
-time: On Monday, April, 2018
+time: On Monday, April 23, 2018
 location: BeiJing
 pulished: true
 excerpt_separator: "```"
@@ -15,7 +15,7 @@ excerpt_separator: "```"
 ```
 2. Error: cannot post / 报错
 ```
-解决方法：由于项目工期太短，以$http方式的post请求没找到合适的方法，就换成了ajax的post方法
+解决方法：由于项目工期太短，以$http方式的post请求没找到合适的方法，就换成了ajax的post方法，后来确定是访问的地址与index.js的配置地址不匹配造成的
 
 ```
 3.connect ECONNREFUSED 127.0.0.1:3000解决方案

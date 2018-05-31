@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 官网接入网站通经验总结
-time: On Saturday, April, 2018
+time: On Saturday, April 28, 2018
 location: BeiJing
 pulished: true
 excerpt_separator: "```"

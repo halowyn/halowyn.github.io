@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 官网seo总结
-time: On Tuesday, May, 2018
+time: On Tuesday, May 15, 2018
 location: BeiJing
 pulished: true
 excerpt_separator: "```"

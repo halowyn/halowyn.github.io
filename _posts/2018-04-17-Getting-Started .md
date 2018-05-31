@@ -1,7 +1,7 @@
 ---
 layout: post_layout
 title: 小程序 答题王
-time: On Tuesday, April, 2018
+time: On Tuesday, April 17, 2018
 location: BeiJing
 pulished: true
 excerpt_separator: "```"
